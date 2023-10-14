@@ -290,7 +290,7 @@ Dalam membuat form di perlukan tag form yang kemudian yang di tambahkan fieldset
                 <meta name="viewport" content="width=device-widht, initial-scale=1">
                 <style>
                     .dropbtn {
-                        background-color: Irgb(58, 241, 226);
+                        background-color: rgb(58, 241, 226);
                         color: rgb(10, 3, 3);
                         padding: 16px;
                         font-size: 16px;
