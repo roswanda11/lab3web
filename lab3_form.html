@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Lanjutan</title>
+    <style>
+        form p > label {
+            display: inline-block;
+            width: 100px;
+        }
+        form input[type="text"], form textarea {
+            border: 1px solid #ff3794;
+        }
+        form input[type="submit"] {
+            border: 1px solid darkred;
+            background-color: pink;
+            color: darkred;
+            font-weight: bold;
+            padding: 5px 15px;
+        }
+        
+        legend {
+            font: 50px bold;
+            color:darkcyan;
+            font-weight: bold;
+            padding: 5px 15px;
+        }
+    </style>
 </head>
-<style>
-    form p > label {
-        display: inline-block;
-        width: 100px;
-    }
-    form input[type="text"], form textarea {
-        border: 1px solid #ff3794;
-    }
-    form input[type="submit"] {
-        border: 1px solid darkred;
-        background-color: pink;
-        color: darkred;
-        font-weight: bold;
-        padding: 5px 15px;
-    }
     
-    legend {
-        font: 50px bold;
-        color:darkcyan;
-        font-weight: bold;
-        padding: 5px 15px;
-    }
-</style>
 <body>
     <header>
         <h1>Membuat Form</h1>
