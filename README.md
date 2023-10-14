@@ -279,7 +279,16 @@ Dalam membuat form di perlukan tag form yang kemudian yang di tambahkan fieldset
 
 - Lakukan Refresh pada Web Browser, dan Simaklah perubahan yang terjadi setelahnya:
 
-![image](https://github.com/roswanda11/lab3web/assets/115516632/46fdbbe1-52b5-4b46-b78d-fe59bb7552f9)
+![image](https://github.com/roswanda11/lab3web/assets/115516632/9caf8e95-de58-4e3e-8b8b-7accf76b1bf0)
+
+### 4. Melakukan validasi dokumen html dengan mengakses http://validator.w3.org
+
+![Screenshot (398)](https://github.com/roswanda11/lab3web/assets/115516632/19200869-61ed-42b1-a40c-648ed914b30b)
+
+- Maka hasilnya sebagai berikut :
+
+![image](https://github.com/roswanda11/lab3web/assets/115516632/22e0d1a5-f130-457d-aedd-e3a142d53587)
+
 
 # Pertanyaan dan Tugas
 1. Buatlah form yang menampilkan dropdown menu dan listbox dengan multiple selection.
