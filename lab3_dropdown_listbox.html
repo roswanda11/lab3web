@@ -1,84 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta name="viewport" content="width=device-widht, initial-scale=1">
-        <style>
-            .dropbtn {
-                background-color: rgb(58, 241, 226);
-                color: rgb(10, 3, 3);
-                padding: 16px;
-                font-size: 16px;
-                border: none;
-                cursor: pointer;
-            }
-            .dropbtn:hover, .dopbtn:focus { 
-                background-color: rgb(241, 134, 255); 
-            }
-            .dropdown {
-                position: relative;
-                display: inline-block;
-            }
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                min-width: 160px;
-                background-color: rgb(255, 34, 170);
-                box-shadow: 0px 8px 16px 0px rgba(23, 189, 201, 8.2);
-                overflow: auto;
-            }
-            .dropdown-content a {
-                color: rgb(1, 2, 0);
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-            }
-            .dropdown a:hover {background-color: rgb(151, 149, 248);}
-            .show {display: block;}
-        </style>
-    </head>
-    <body>
-        <h1>Membuat Dropdown</h1>
-        <p>Silahkan klik menu untuk memilih.</p>
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Menu</button>
-            <div id="myDropdown" class="dropdown-content">
-            <a href="lab3_list.html">Membuat List</a>
-            <a href="lab3_tabel.html">Membuat Tabel</a>
-            <a href="lab3_form.html">Membuat Form</a>
-        </div>
-    </div>
-        <script>
-        /* When the user clicks on the button,
-        toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-        // Close the dropdown if the user clicks outside of it
-        widow.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i=0; i < dropdowns.length; i++) { 
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) { 
-                        openDropdown.classList.remove('show');
-                    }
-                    }
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-widht, initial-scale=1"/>
+        <title>Formulir Pendaftaran HIMATIF-2024</title>
+        <body>
+            <form action="proses.php" method="post" class="form">
+                <fieldset>
+                    <legend>FORMULIR PENDAFTARAN HIMATIF UPB - 2024</legend>
+                    <h2> A. Identitas</h2>
+                    <p>
+                        <label for="nama">Nama Lengkap :</label>
+                        <input
+                        type="text"
+                        id="nama"
+                        name="nama"
+                        required
+                        placeholder="Masukkan Nama Lengkap Anda"/>
+                    </p>
+                    <p>
+                        <label for="nama">Nama Panggilan :</label>
+                        <input
+                        type="text"
+                        id="nama"
+                        name="nama"
+                        required
+                        placeholder="Masukkan Nama Panggilan Anda"/> 
+                    </p>
+                    <p>
+                        <label for="nim">NIM :</label>
+                        <input
+                        type="text"
+                        id="nim"
+                        name="nim"
+                        required
+                        placeholder="Masukkan NIM Anda"/>
+                    </p>
+                    <p>
+                        <label for="pilihan">Jenis Kelamin :</label>
+                        <select id="pilihan" name="pilihan">
+                            <option value="opsi1">Pilih</option>
+                            <option value="opsi2">Laki-Laki</option>
+                            <option value="opsi3">Perempuan</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="tempat_lahir">Tempat Lahir :</label>
+                        <input type="text" id="tempat_lahir" name="tempat_lahir"required
+                        placeholder="Masukkan Tempat Lahir Anda"/>
+                    </p>
+                    <p>
+                        <label for="tanggal_lahir">Tanggal Lahir :</label>
+                        <input type="date" id="tanggal_lahir" name="tanggal_lahir"required/>
+                    </p>
+                    <p>
+                        <label for="multiple">Tahun Angkatan :</label>
+                        <select id="multiple" name="multiple[]">
+                            <option value="item1">2021</option>
+                            <option value="item2">2022</option>
+                            <option value="item3">2023</option>
+                            <option value="item4">2024</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="Alamat">Alamat :</label>
+                        <textarea
+                        id="alamat"
+                        name="alamat"
+                        rows="3"
+                        required
+                        placeholder="Masukkan Alamat Anda"
+                        ></textarea>
+                    </p>
+                    <p>
+                        <label for="email">Email :</label>
+                        <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="Masukkan Email Anda"/>
+                    </p>
+                    <p>
+                        <label for="no_hp">No HP (WhatsApp) :</label>
+                        <input
+                        type="text"
+                        id="no_hp"
+                        name="no_hp"
+                        required
+                        placeholder="Masukkan No WA Anda"/>
+                    </p>
+                    <h2>B. Motto Hidup</h2>
+                    <p>
+                        <textarea
+                        id="motto_hidup"
+                        name="motto_hidup
+                        rows="3"
+                        required
+                        placeholder="Masukkan Motto Hidup Anda"
+                        ></textarea>
+                    </p>
+                    <p>
+                        <input type="submit" value="Kirim"/>
+                    </p>
+                </fieldset>
+            </form>
+            <style>
+                body{
+                 font-family: Arial, sans-serif;
+                 background-color: #f5e898;
+                 margin: 0;
+                 padding: 0;
                 }
-            }
-        </script>
-        <hr>
-        <form>
-            <h2>Membuat Listbox</h2>
-            <p>Daftar Menu Food Court Hollywood :</p>
-            <select name="menu" size="4">
-                <option value="1">Ayam Geprek</option>
-                <option value="1">Spaghetti</option>
-                <option value="1">Sushi</option>
-                <option value="1">Seblak</option>
-                <option value="1">Bakso Mozarella</option>
-            </select>
-            <p><input type="submit" value="submit" /></p>
-        </form> 
-    </body>
+     
+                 fieldset{
+                 border: 2px solid #d1a93e;
+                 border-radius: 10px;
+                 background-color: #fff;
+                 padding: 50px;
+                 margin: 20px auto;
+                 max-width: 800px;
+                }
+     
+                .form{
+                 display: flex;
+                 flex-direction: column;
+                }
+     
+                .form legend{
+                 font-weight: bold;
+                 font-size: 1.5rem;
+                 text-align: center;
+                 color: #8c6600;
+                }
+     
+                .form h2{
+                 margin-top: 20px;
+                 font-size: 1.2rem;
+                 color: #d1a93e;
+                }
+     
+                .form p{
+                 margin: 15px 0;
+                }
+     
+                label{
+                 font-weight: bold;
+                 color: #333;
+                }
+     
+                input[type="text"],
+                input[type="date"],
+                select,
+                textarea{
+                 width: 100%;
+                 padding: 10px;
+                 margin: 5px 0;
+                 border: 1px solid #acc;
+                 border-radius: 5px;
+                 font-size: 1rem;
+                }
+     
+                select[multiple]{
+                 height: 100px;
+                }        
+     
+                textarea{
+                 height: 100px;
+                }
+     
+                input[type="submit"]{
+                 width: auto;
+                 background-color: #d1a93e;
+                 color:#fff;
+                 border: none;
+                 border-radius: 5px;
+                 padding: 10px 20px;
+                 cursor: pointer;
+                 font-size: 1rem;
+                }
+             </style>
+        </body>
+    </head>
 </html>
